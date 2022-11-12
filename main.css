@@ -71,3 +71,28 @@ header {
 .about__info {
     max-width: 550px;
 }
+.form__container {
+    width: 550px;
+}
+.form {
+    background-color: #1D263A;
+    color: #fff;
+    padding-top: 115px;
+    padding-bottom: 115px;
+    text-align: center;
+    /* добавляем форму в flex-container и цетруем её */
+    display:flex;
+    justify-content: center;
+}
+.form h1 {
+    size: 48px;
+}
+.form p {
+    size: 18px;
+    opacity: 0.65;
+}
+.form__group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
