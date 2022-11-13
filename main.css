@@ -162,3 +162,8 @@ opacity: 0.5;
 .footer__links a {
   margin-bottom: 15px;
 }
+button:hover {
+  background-color: #f6980c;
+  box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
+  transition: background-color 0.3s ease-in;
+}
