@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block {
+    width: 500px;
+    height: 500px;
+    border: 3px solid;
+    position: relative; /* родительский тег */
+}
+.item {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item:hover {
+    animation: circle 1s linear;
+}
+.item1 {
+    background-color: #f00;
+    position: absolute;
+    /*
+        top, left, right, bottom
+    */
+    top: 100px;
+    right: 50px;
+}
+.item2 {
+    background-color: #0f0;
+    position: relative;
+    left: 50px;
+    top: -10px;
+}
+.item3 {
+    background-color: #00f;
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+}
+
+/*
+    position: static; // тег не двигается
+    position: absolute; // тег находится там же, где и должен был располагаться изначально
+    position: relative; // тег стоит на месте - позиционирование относительно своего местоположения
+    position: fixed; // позиционирование относительно границ окна браузера (viewport)
+
+    Абсолютное позиционирование располагает элемент относительно ближайшего родительского тега, у которого position отличен от static
+*/
+
+@keyframes circle {
+    25% {
+        transform: rotate(30deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/*
+    q 5.3
+    img {
+        width: 300px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        animation-name: example;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: 2;
+    }
+*/
+
+/*
+    Делаем сайт =)
+*/
+.wrapper {
+    min-height: 100vh;
+    width: 1000px;
+    background-color: aquamarine;
+    font-family: sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+h2 {
+    margin: 0;
+}
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 30px;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+.cards-container {
+    background-color: aliceblue;
+    display: grid;
+    padding: 30px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.cards-container h2 {
+    grid-column-end: span 4;
+    text-align: center;
+}
+.card {
+    border: 1px solid;
+    padding: 20px;
+    text-align: center;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 600px;
+    padding: 30px;
+    background-image: radial-gradient(circle, cornflowerblue, aliceblue, darkslateblue); /* градиент */
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+    .banner {
+        background-image: radial-gradient(circle, cadetblue, springgreen, cadetblue);
+    }
+}
+@media (max-width: 999px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cards-container h2 {
+        grid-column-end: span 3;
+    }
+}
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-container h2 {
+        grid-column-end: span 2;
+    }
+}
+@media (max-width: 400px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    .cards-container h2 {
+        grid-column-end: 2;
+    }
+}
