@@ -70,22 +70,160 @@ header {
     position: relative;
   }
   .about h1 {
-      font-size: 70px;
-      line-height: 76px;            
+    font-size: 70px;
+    line-height: 76px;            
 }
 .about p {
-    font-size: 18px;
-    line-height: 30px;
-    opacity: 0.8;
+  font-size: 18px;
+  line-height: 30px;
+  opacity: 0.8;
 }
 .about button {
-    font-size: 18px;
-    border-radius: 20px;
-    padding: 20px 25px;
-    margin-top: 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 20px 25px;
+  margin-top: 20px;
 }
 .about__info {
-    max-width: 550px;
+  max-width: 550px;
+}
+.features {
+    background-color: #fff;
+    padding: 115px 60px;
+  } 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  }
+.card {
+      /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+      /* transition: 0.3s; */
+    padding: 35px 40px 25px 40px;
+    background: #FFFFFF;
+    border: 1px solid;
+    border-color: #D9E4E6;
+    border-radius: 5px;
+}
+.card p {
+  opacity: 0.8;
+  font-size: 16px;
+  line-height: 22px;
+}
+.card__logo {
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #logo_1 {
+    color: #ffb406;
+  }
+  #logo_2 {
+    color: #ad1714;
+  }
+  #logo_3 {
+    color: #22a030;
+  }
+.features__border {
+    margin: 50px 0px;
+    border: 1px solid;
+    color: #E6EAF4;
+  }
+.features__feedback {
+  display: flex;
+ }
+.features__feedback-left {
+  margin-right: 10px;
+ }
+ .features__feedback-left h2 {
+  font-size: 48px;
+ }
+ .features__feedback-left p {
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.7;
+ }
+ .features__feedback-right {
+  display: flex;
+  align-items: center;
+ }
+ .features__box {
+  height: 150px;
+  padding: 30px 40px 25px 40px;
+  color: white;
+  border-radius: 25px;
+}
+.features__box h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 48px;
+}
+.features__savings-box {
+  background-color: #dc5e26;
+  box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+  margin-right: 30px;
+}
+.features__rate-box {
+  background-color: #1D263A;
+  box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+}
+ .stars {
+    color: #ff7039;
+}
+.promo {
+  display: flex;
+}
+.promo__image {
+  width: 50%;
+  background-image: url('img/promo.jpeg');
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+}
+.promo__right {
+  background-color: #dd5f26;
+  padding: 160px 60px;
+}
+.promo__right-box {
+  background-color: white;
+  padding: 30px 40px;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  border-radius: 25px;
+}
+.promo__right-box p::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ec6b29;
+  margin-right: 10px;
+}
+.promo__right-box p {
+  opacity: 0.8;
+}
+.promo button{
+  background-color: #107b1c;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 15px 30px;
+  font-weight: 600;
+}
+.button__promo {
+display: flex;
+justify-content: center;
+}
+.promo__right-box button i {
+  font-size: 15px;
+  margin-left: 5px;
 }
 .form__container {
     width: 550px;
@@ -230,34 +368,63 @@ button:hover {
   header {
       padding: 10px;
   }
-
   .header__logo {
       height: 20px;
   }
-
   header a {
       margin-right: 10px;
   }
-
   .about {
       flex-direction: column-reverse;
       padding: 50px 10px;
   }
-
   .about h1 {
       font-size: 36px;
       line-height: 40px;
   }
-
   .about__image {
       width: 280px;
   }
-
   .about__sun-image {
       width: 75px;
       height: 75px;
   }
-
+  .features {
+    padding: 50px 10px;
+  }
+  .cards {
+    grid-template-columns: auto;
+  }
+  .features__feedback {
+    flex-direction: column;
+   }
+   .features__feedback-left {
+    margin-right: 0;
+   }
+   .features__feedback-left h2 {
+    font-size: 36px;
+   }
+   .features__feedback-right {
+    flex-direction: column;
+    align-items: initial;
+  }
+  .features__box h3 {
+    font-size: 36px;
+  }
+  .features__savings-box {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .promo__image {
+    height: 500px;
+    width: 100%;
+  }
+  .promo {
+    flex-direction: column-reverse;
+  }
+  .promo__right {
+    padding: 50px 10px;
+  }
   .form {
       padding: 50px 10px;
   }
