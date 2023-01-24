@@ -40,6 +40,13 @@ header {
     box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
     padding: 15px;
   }
+  .orb-canvas {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+  }
+
   .about__image {
     width: 500px;
   }
@@ -60,6 +67,7 @@ header {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
   }
   .about h1 {
       font-size: 70px;
